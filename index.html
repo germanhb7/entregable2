@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rotisería Germán - Simulador de Compras</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Rotisería Germán - Simulador de Compras</h1>
+  </header>
+
+  <section id="productos">
+    <h2>Productos Disponibles</h2>
+    <!-- Los productos se agregarán aquí mediante JS -->
+  </section>
+
+  <section id="carrito">
+    <h2>Carrito</h2>
+    <p>Total: $<span id="totalCarrito">0</span></p>
+    <button id="vaciarCarrito">Vaciar Carrito</button>
+    <button id="finalizarCompra">Finalizar Compra</button>
+  </section>
+
+  <section id="metodos">
+    <h2>Método de Pago y Entrega</h2>
+    <div>
+      <label for="pago">Método de Pago:</label>
+      <select id="pago">
+        <option value="efectivo">Efectivo</option>
+        <option value="tarjeta">Tarjeta de Crédito</option>
+        <option value="transferencia">Transferencia</option>
+      </select>
+    </div>
+    <div>
+      <label for="entrega">Método de Entrega:</label>
+      <select id="entrega">
+        <option value="retirar">Retiro en el local</option>
+        <option value="envio">Envío a domicilio</option>
+      </select>
+    </div>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
