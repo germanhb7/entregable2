@@ -22,16 +22,19 @@ const productos = [
 // Función para calcular el precio con IVA incluido
 const calcularIva = (precio) => precio * IVA;
 
-// Función para mostrar los productos disponibles
+// Función para mostrar los productos disponibles con imágenes
 const mostrarProductos = () => {
-  const contenedorProductos = document.getElementById('productos');
-  contenedorProductos.innerHTML = ''; // Limpiar cualquier contenido anterior
+  const contenedorProductos = document.querySelector('.productos-container');
+  contenedorProductos.innerHTML = '';
 
   productos.forEach((producto) => {
     const productoDiv = document.createElement('div');
     productoDiv.classList.add('producto');
 
+    const nombreImagen = producto.nombre.toLowerCase().replace(/ /g, '-') + ".jpg";
+
     const productoHTML = `
+      <img src="img/${nombreImagen}" alt="${producto.nombre}" class="producto-img">
       <h3>${producto.nombre}</h3>
       <p>$${producto.precio} + IVA</p>
       <button class="agregar-btn" data-id="${producto.id}">Agregar al carrito</button>
@@ -41,7 +44,6 @@ const mostrarProductos = () => {
     contenedorProductos.appendChild(productoDiv);
   });
 
-  // Asignar eventos de agregar al carrito
   document.querySelectorAll('.agregar-btn').forEach((btn) => {
     btn.addEventListener('click', agregarAlCarrito);
   });

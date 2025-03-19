@@ -1,0 +1,14 @@
+# Ignorar archivos del sistema de Windows
+Thumbs.db
+Desktop.ini
+.DS_Store
+.vscode/
+.gitconfig
+*.log
+
+# Ignorar directorios de usuario
+/AppData/
+/Documents/
+/Downloads/
+/Videos/
+/Music/
