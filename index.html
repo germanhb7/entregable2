@@ -6,6 +6,8 @@
   <title>Rotisería Germán - Simulador de Compras</title>
   <link rel="stylesheet" href="style.css">
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
   <header>
@@ -57,8 +59,8 @@
       <p>Teléfono: 011-12345678</p>
       <p>Email: contacto@rotiseriagerman.com</p>
       <p>Síguenos en nuestras redes sociales: 
-        <a href="#" target="_blank">Facebook</a>, 
-        <a href="#" target="_blank">Instagram</a>
+        <a href="#" target="_blank" class="social-link"><i class="fab fa-facebook-square"></i> Facebook</a>, 
+        <a href="#" target="_blank" class="social-link"><i class="fab fa-instagram"></i> Instagram</a>
       </p>
     </section>
 
@@ -80,11 +82,22 @@
           width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
       </div>
     </div>
-    
-    
-    </section>
   </main>
 
   <script src="app.js"></script>
+
+  <style>
+    /* Estilo para los íconos de redes sociales */
+    .social-link {
+      text-decoration: none;
+      color: #000;
+      font-size: 24px;
+      margin: 0 10px;
+    }
+
+    .social-link:hover {
+      color: #007bff; /* Puedes cambiar el color al pasar el mouse */
+    }
+  </style>
 </body>
 </html>

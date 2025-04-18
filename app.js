@@ -39,6 +39,9 @@ function agregarAlCarrito(id) {
   carrito.push(producto);
   localStorage.setItem("carrito", JSON.stringify(carrito));
   actualizarCarrito();
+
+  // Mostrar el SweetAlert de éxito
+  Swal.fire("¡Producto agregado!", `${producto.nombre} se agregó con éxito al carrito.`, "success");
 }
 
 // Mostrar total
