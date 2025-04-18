@@ -90,6 +90,58 @@ select {
 }
 
 /* RESPONSIVE DESIGN */
+
+/* Pantallas grandes (de escritorio) */
+@media (min-width: 1200px) {
+  body {
+    padding: 30px;
+  }
+
+  .productos-container {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+  }
+
+  .producto {
+    padding: 25px;
+  }
+
+  .producto-img {
+    height: 250px;
+  }
+
+  button {
+    font-size: 1.2rem;
+    padding: 12px;
+  }
+}
+
+/* Pantallas medianas (tabletas y pantallas pequeñas de escritorio) */
+@media (max-width: 1024px) {
+  body {
+    padding: 15px;
+  }
+
+  .productos-container {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+  }
+
+  .producto {
+    padding: 18px;
+  }
+
+  .producto-img {
+    height: 180px;
+  }
+
+  button {
+    font-size: 1rem;
+    padding: 10px;
+  }
+}
+
+/* Pantallas pequeñas (tabletas, smartphones en modo paisaje) */
 @media (max-width: 768px) {
   body {
     padding: 10px;
@@ -114,6 +166,7 @@ select {
   }
 }
 
+/* Pantallas muy pequeñas (smartphones en modo retrato) */
 @media (max-width: 480px) {
   .productos-container {
     grid-template-columns: 1fr;
@@ -121,6 +174,11 @@ select {
 
   .producto-img {
     height: 120px;
+  }
+
+  button {
+    font-size: 0.8rem;
+    padding: 7px;
   }
 }
 
